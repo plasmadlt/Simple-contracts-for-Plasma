@@ -1,0 +1,143 @@
+{
+    "____comment": "This file was generated with ion-abigen. DO NOT EDIT ",
+    "version": "ion::abi/1.1",
+    "types": [
+        {
+            "new_type_name": "amount_t",
+            "type": "int128"
+        }
+    ],
+    "structs": [
+        {
+            "name": "big_asset",
+            "base": "",
+            "fields": [
+                {
+                    "name": "symbol",
+                    "type": "symbol"
+                },
+                {
+                    "name": "amount",
+                    "type": "amount_t"
+                },
+                {
+                    "name": "value",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "closedeal",
+            "base": "",
+            "fields": [
+                {
+                    "name": "dealId",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "deal",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "payer",
+                    "type": "name"
+                },
+                {
+                    "name": "receiver",
+                    "type": "name"
+                },
+                {
+                    "name": "quantity",
+                    "type": "big_asset"
+                },
+                {
+                    "name": "closeAfter",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "open",
+            "base": "",
+            "fields": [
+                {
+                    "name": "dealId",
+                    "type": "uint64"
+                },
+                {
+                    "name": "payer",
+                    "type": "name"
+                },
+                {
+                    "name": "receiver",
+                    "type": "name"
+                },
+                {
+                    "name": "quantity",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "params",
+            "base": "",
+            "fields": [
+                {
+                    "name": "callee",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "setcallee",
+            "base": "",
+            "fields": [
+                {
+                    "name": "callee",
+                    "type": "name"
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "name": "closedeal",
+            "type": "closedeal",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "open",
+            "type": "open",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "setcallee",
+            "type": "setcallee",
+            "ricardian_contract": ""
+        }
+    ],
+    "tables": [
+        {
+            "name": "deals",
+            "type": "deal",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "params",
+            "type": "params",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        }
+    ],
+    "ricardian_clauses": [],
+    "variants": []
+}
